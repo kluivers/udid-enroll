@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What's my UDID?</title>
+	<meta name = "viewport" content = "width=320, initial-scale=1.0, user-scalable=no">
+	<script type="text/javascript">
+	function createCookie(name,value,days) {
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+		}
+		else var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+	}
+	
+	window.addEventListener("load", function() {
+		document.getElementById("config-form").addEventListener("submit", function(e) {
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			
+			if (name == "") {
+				e.preventDefault();
+				alert("Please fill in a name");
+				return false;
+			}
+			
+			// TODO: get values for cookie from actual form
+			//createCookie("config-details", name + " <" + email + ">", 1);
+		});
+	});
+	
+	</script>
+	<style type="text/css">
+	body {
+		font-family: Helvetica, sans-serif;
+		font-size: 90%;
+	}
+	.step {
+		float: left;
+		margin-left: -36px;
+		width: 26px;
+		height: 26px;
+		background-color: #ccc;
+		color: #666;
+		border-radius: 13px;
+		text-align: center;
+		line-height: 26px;
+		font-weight: bold;
+	}
+	.row {
+		padding-left: 36px;
+		padding-right: 15px;
+		margin-bottom: 10px;
+	}
+	.row.buttons {
+		margin-top: 30px;
+		padding: 0 10px;
+		font-size: 1.2em;
+	}
+	.row h2 {
+		line-height: 26px;
+		font-size: 1.2em;
+	}
+	.row label {
+		display: block;
+	}
+	.row input {
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+<form method="POST" action="enroll.php" id="config-form">
+	<input type="hidden" name="CONFIG" value="1">
+	<div class="row">
+		<div class="step">1.</div> 
+		<h2>Your details</h2>
+	</div>
+	<div class="row">
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name">
+	</div>
+	<div class="row">
+		<label for="email">Email (optional)</label>
+		<input type="text" name="email" id="email" autocapitalize="off">
+	</div>
+	<div class="row">
+		<div class="step">2.</div> 
+		<h2>Accept the mobile configuration profile</h2>
+	</div>
+	<div class="row">
+		<div class="step">3.</div> 
+		<h2>Done!</h2>
+	</div>
+	<div class="row buttons">
+		<input type="submit" value="Get Started!">
+	</div>
+</form>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-874704-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

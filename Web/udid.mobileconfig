@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <dict>
+        <key>URL</key>
+        <string>http://joris.kluivers.nl/udid/enroll.php</string>
+        <key>DeviceAttributes</key>
+        <array>
+			<string>DEVICE_NAME</string>
+            <string>UDID</string>
+            <string>IMEI</string>
+            <string>ICCID</string>
+            <string>VERSION</string>
+            <string>PRODUCT</string>
+        </array>
+		<key>Challenge</key>
+		<data>CHALLENGE_DATA</data>
+    </dict>
+    <key>PayloadOrganization</key>
+    <string>Joris Kluivers</string>
+    <key>PayloadDisplayName</key>
+    <string>Profile Service</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadUUID</key>
+    <string>C2143A9A-89D1-4CD3-BF7B-25D9561EB67D</string>
+    <key>PayloadIdentifier</key>
+    <string>nl.kluivers.joris.profile-service</string>
+    <key>PayloadDescription</key>
+    <string>This temporary profile will be used to find and display your current device's UDID.</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
+</dict>
+</plist>
